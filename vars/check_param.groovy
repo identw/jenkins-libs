@@ -6,7 +6,6 @@ def call (param) {
 //        currentBuild.result = 'FAILURE'
 //    }
 
-    for(int i=0; i < binding.variables.size(); i++) {
-        println binding.variables[i]
-    }
+    println binding.variables.inspect()
+
 }
