@@ -1,4 +1,3 @@
-@NonCPS
 def call (param) {
 //    if ( ! binding.hasVariable(param) ) {
 //        echo "Not set variable ${param}"
@@ -7,5 +6,7 @@ def call (param) {
 //        currentBuild.result = 'FAILURE'
 //    }
 
-    binding.variables.each {k,v -> println "$k = $v"}
+    for(int i=0; i < binding.variables.size(); i++) {
+        println binding.variables[i]
+    }
 }
