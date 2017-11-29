@@ -1,3 +1,4 @@
+@NonCPS
 def call (param) {
 //    if ( ! binding.hasVariable(param) ) {
 //        echo "Not set variable ${param}"
