@@ -1,4 +1,5 @@
 def call (param) {
+    web_root = "222"
     println Eval.me(param)
 }
 //    try {
