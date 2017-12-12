@@ -3,7 +3,8 @@ def call(dirs) {
     def revs
     for (i = 0; i < dirs.size(); i++) {
         dir(dirs[i]) {
-            revs.put( dirs[i], sh returnStdout: true, script: 'svn info --show-item last-changed-revision' )
+            def sh_return = sh returnStdout: true, script: 'svn info --show-item last-changed-revision'
+            revs.put( dirs[i], sh_return )
         }
     }
     return revs
