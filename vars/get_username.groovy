@@ -20,9 +20,9 @@ def call() {
             build = job.getBuildByNumber(buildId)
 
             cause = build.getCause(hudson.model.Cause.UserIdCause.class)
+            i++
             continue
         }
-
         i++
     }
 
